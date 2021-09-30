@@ -42,11 +42,11 @@ CASE WHEN Platform in ('Wii','DS','3DS','N64','WiiU') THEN 'Nintendo' -- creamos
 Year,
 Genre,
 Publisher,
-CAST(REPLACE(NA_Sales, '.', ',') AS MONEY) AS NA_Sales, --cambiamos puntos por comas y el tipo de variable con replace y cast.
-CAST(REPLACE(EU_Sales, '.', ',') AS MONEY) AS EU_Sales ,
-CAST(REPLACE(JP_Sales, '.', ',') AS MONEY) AS JP_Sales,
-CAST(REPLACE(Other_Sales, '.', ',') AS MONEY) AS Other_Sales,
-CAST(REPLACE(Global_Sales, '.', ',') AS MONEY) AS Global_Sales
+CAST(REPLACE(NA_Sales, '.', ',') AS MONEY)/100 AS NA_Sales, --cambiamos puntos por comas y el tipo de variable con replace y cast. Dividimos por 100 para que se mantenga el sentido de los datos.
+CAST(REPLACE(EU_Sales, '.', ',') AS MONEY)/100 AS EU_Sales ,
+CAST(REPLACE(JP_Sales, '.', ',') AS MONEY)/100 AS JP_Sales,
+CAST(REPLACE(Other_Sales, '.', ',') AS MONEY)/100 AS Other_Sales,
+CAST(REPLACE(Global_Sales, '.', ',') AS MONEY)/100 AS Global_Sales
 INTO
 games_clean --guardamos el resultado en una nueva tabla.
 FROM
