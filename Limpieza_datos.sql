@@ -5,15 +5,15 @@ FROM games
 En este apartado vamos a escribir queries que ilustren los problemas que tiene el conjunto de datos
 y que vamos a tratar de solucionar mediante la limpieza del mismo.
 */
---1.1 Rank, simplemente es una columna "identity" y para mi proyecto en tableau no va a ser interesante.
+--1.1 Rank simplemente es una columna "identity" y para mi proyecto en tableau no va a ser interesante.
 SELECT *
 FROM games
 ORDER BY Rank
---1.2. Hay valores nulos para Platform, year, genre y publisher.
+--1.2. Hay valores nulos para Platform, Year, Genre y Publisher.
 SELECT *
 FROM games
 WHERE year is null or Platform is null or Genre is null or Publisher is null
---1.3. Las variables numéricas estan mal formateadas, con puntos en lugar de comas y clasificadas como "varchar".
+--1.3. Las variables numÃ©ricas estan mal formateadas, con puntos en lugar de comas y clasificadas como "varchar".
 SELECT 
 NA_Sales,
 EU_Sales,
@@ -26,16 +26,15 @@ SELECT
 DISTINCT(Platform)
 FROM
 games
--- 1.5. Voy a crear una columna con la compañía que ha desarrollado las consolas. 
+-- 1.5. Voy a crear una columna con la compaÃ±Ã­a que ha desarrollado las consolas con el condicional case. 
 
 /* BLOQUE 2: LIMPIAR EL CONJUNTO DE DATOS Y GUARDARLO EN UNA NUEVA TABLA.
 En una sola consulta, podemos resolver los problemas encontrados y guardar la nueva tabla.
 */
-
 SELECT
 Name,
 Platform,
-CASE WHEN Platform in ('Wii','DS','3DS','N64','WiiU') THEN 'Nintendo' -- creamos la variable del punto 5 con case when.
+CASE WHEN Platform in ('Wii','DS','3DS','N64','WiiU') THEN 'Nintendo' -- creamos la variable del punto 5
  WHEN Platform in ('PS','PS2','PS3','PS4','PSP') THEN 'Playstation'
  WHEN Platform in('X360','XB','XONE') THEN 'Microsoft'
  ELSE 'PC'
@@ -72,7 +71,7 @@ JP_Sales,
 Other_Sales,
 Global_Sales
 FROM games_clean
---3.4 Comprobamos que haya hecho la selección de plataformas que conozco y haya creado CompanyPlatform correctamente.
+--3.4 Comprobamos que haya hecho la selecciÃ³n de plataformas que conozco y haya creado CompanyPlatform correctamente.
 SELECT
 DISTINCT(Platform),
 CompanyPlatform
