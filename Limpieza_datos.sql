@@ -1,4 +1,4 @@
---datos importados
+--Datos importados
 SELECT*
 FROM games
 /* BLOQUE 1: DETECTAR PROBLEMAS.
