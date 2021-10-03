@@ -5,7 +5,7 @@ Proyecto creado por Adrián Rico Alonso
 ## OBJETIVO DEL PROYECTO
 
 En este proyecto trato de limpiar y presentar visualmente en Tableau los
-datos de rendimiento económico de los videojuegos lanzados en el período
+datos de unidades vendidas de los videojuegos lanzados en el período
 1985-2016. Los datos provienen de kaggle y los puedes encontrar haciendo
 [click aqui](https://www.kaggle.com/gregorut/videogamesales).
 
