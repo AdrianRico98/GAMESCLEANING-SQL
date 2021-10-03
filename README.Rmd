@@ -4,7 +4,7 @@ author: "Proyecto creado por Adrián Rico Alonso"
 output: github_document
 ---
 ## OBJETIVO DEL PROYECTO
-En este proyecto trato de limpiar y presentar visualmente en Tableau los datos de rendimiento económico de los videojuegos lanzados en el período 1985-2016. Los datos provienen de kaggle y los puedes encontrar haciendo [click aqui](https://www.kaggle.com/gregorut/videogamesales).
+En este proyecto trato de limpiar y presentar visualmente en Tableau los datos de unidades vendidas de los videojuegos lanzados en el período 1985-2016. Los datos provienen de kaggle y los puedes encontrar haciendo [click aqui](https://www.kaggle.com/gregorut/videogamesales).
 
 En este repositorio podrás encontrar el código SQL que sirve para limpiar los datos, por lo tanto esta es la parte 1 del proyecto. La parte 2 la encontrarás en [mi portfolio de tableau public](https://public.tableau.com/app/profile/adri.n.rico.alonso), donde presento un dashboard con las conclusiones más interesantes tras el análisis de los datos.
 
